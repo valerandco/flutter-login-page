@@ -15,13 +15,14 @@ class _LoginPageState extends State<LoginPage> {
       body: SafeArea(
         child: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: 25),
+
               // hello
               Text(
                 'Hello!',
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 36,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -35,7 +36,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
 
-              SizedBox(height: 20),
+              SizedBox(height: 50),
 
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 25),
@@ -81,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
 
-              SizedBox(height: 10),
+              SizedBox(height: 25),
 
               // sign in button
 
@@ -106,7 +107,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
 
-              SizedBox(height: 10),
+              SizedBox(height: 25),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
