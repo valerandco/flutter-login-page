@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  final VoidCallback showRegisterPage;
+  const LoginPage({Key? key, required this.showRegisterPage}) : super(key: key);
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -17,6 +18,14 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+
+              Icon(
+                Icons.local_activity_outlined,
+                size: 100,
+                color: Colors.black12,
+              ),
+
+              SizedBox(height: 75),
 
               // hello
               Text(
@@ -119,11 +128,16 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                   SizedBox(width: 10),
-                  Text(
-                    'Register now',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.bold,
+
+
+                  GestureDetector(
+                    onTap: widget.showRegisterPage,
+                    child: Text(
+                      'Register now',
+                      style: TextStyle(
+                        color: Colors.blue,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ],
